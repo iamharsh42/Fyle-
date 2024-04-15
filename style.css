@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 25rem;
+  border: 2px solid grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.row {
+  width: 100%;
+}
+
+.row p {
+  font-weight: 600;
+}
+
+.row input,
+.row select {
+  width: 100%;
+  height: 1.7rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+button {
+  background: rgb(50, 110, 207);
+  color: #fff;
+  font-weight: 600;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 2rem;
+}
+
+.popup {
+  width: 35rem;
+  border: 2px solid grey;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  padding: 4rem 2rem;
+  text-align: center;
+  z-index: 1;
+  background: #fff;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+  margin: 0.6rem;
+}
+
+.popup button {
+  width: 3.5rem;
+}
+.input-bar {
+  width: 100%;
+  height: 1.7rem;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.input-bar input {
+  outline: none;
+  border: none;
+  background: transparent;
+  padding-left: 2px;
+}
+
+.input-bar i {
+  visibility: hidden;
+  text-align: center;
+  font-size: 12px;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding-top: 1px;
+}
+
+.input-bar p {
+  visibility: hidden;
+  font-weight: 300;
+  position: absolute;
+  right: -176px;
+  top: -25px;
+  background: #555;
+  color: #fff;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.select-div {
+  position: relative;
+}
+
+.select-div i {
+  visibility: hidden;
+  text-align: center;
+  font-size: 12px;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding-top: 1px;
+}
+
+.select-div p {
+  visibility: hidden;
+  font-weight: 300;
+  position: absolute;
+  right: -145px;
+  top: -25px;
+  background: #555;
+  color: #fff;
+  padding: 2px;
+  border-radius: 6px;
+}

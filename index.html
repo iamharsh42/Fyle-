@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5791c0fecb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="">
+
+            <div class="row">
+                <p>Enter gross annual income <span class="tooltip"><i class="fa-regular fa-circle-question"
+                            style="color: #000000;"></i><span class="tooltiptext">This is your total
+                            yearly income before
+                            taxes.</span></span></p>
+                <div class="input-bar">
+                    <div class="error-container">
+                        <i id="gross-errorIcon" class="fa-solid fa-exclamation" style="color: red;"></i>
+                        <p id="grossErrorText">Please enter numbers only</p>
+                    </div>
+                    <input type="text" placeholder="Enter gross annual income" id="grossIncome">
+                </div>
+            </div>
+
+            <div class="row">
+                <p>Enter extra income <span class="tooltip"><i class="fa-regular fa-circle-question"
+                            style="color: #000000;"></i><span class="tooltiptext">If you have any other income from any
+                            other source</span></span></p>
+                <div class="input-bar">
+                    <div class="error-container">
+                        <i id="extra-errorIcon" class="fa-solid fa-exclamation" style="color: red;"></i>
+                        <p id="extraErrorText">Please enter numbers only</p>
+                    </div>
+                    <input type="text" placeholder="Enter extra income from other sources" id="extraIncome">
+                </div>
+            </div>
+
+            <div class="row">
+                <p>Enter age group <span class="tooltip"><i class="fa-regular fa-circle-question"
+                            style="color: #000000;"></i><span class="tooltiptext">This is your total
+                            yearly income before
+                            taxes.</span></span></p>
+                <div class="select-div">
+                    <i id="age-errorIcon" class="fa-solid fa-exclamation" style="color: red;"></i>
+                    <p id="ageErrorText">This field is mandatory</p>
+                    <select name="age" id="age">
+                        <option value="" disabled selected hidden></option>
+                        <option value="1">&lt; 40</option>
+                        <option value="2">≥ 40 &amp; &lt; 60</option>
+                        <option value="3">≥ 60</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <p>Enter total applicable deductions <span class="tooltip"><i class="fa-regular fa-circle-question"
+                            style="color: #000000;"></i><span class="tooltiptext">Any expenses or any other
+                            deductions.</span></span></p>
+                <div class="input-bar">
+                    <div class="error-container">
+                        <i id="deductions-errorIcon" class="fa-solid fa-exclamation" style="color: red;"></i>
+                        <p id="deductionsErrorText">Please enter numbers only</p>
+                    </div>
+                    <input type="text" placeholder="Add total applicable deductions" id="deductions">
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="openPopup()">Submit</button>
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <h2>Your overall income will be</h2>
+        <h2 id="final-income">12,00,000</h2>
+        <h3>after tax deductions</h3>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
